@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a=sc.nextInt();
+	    if(a<10){
+	        System.out.println(a+" is single digit");
+	    }
+	    else if(a>=10 && a<100){
+	        System.out.println(a+" is double digit");
+	    }
+	    else if(a>=100 && a<999){
+	        System.out.println(a+" is triple digit");
+	    }
+		else{
+		    System.out.println("no value");
+		}
+	}
+}
