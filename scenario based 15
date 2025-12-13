@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter passenger age: ");
+        int age = sc.nextInt();
+
+        int ticketPrice;
+        if (age < 0) {
+            System.out.println("Invalid age entered!");
+            sc.close();
+            return;
+        } else if (age < 12) {
+            ticketPrice = 100; 
+        } else if (age < 60) {
+            ticketPrice = 200; 
+        } else {
+            ticketPrice = 150; 
+        }
+
+        System.out.println("Ticket price: ₹" + ticketPrice);
+
+        sc.close();
+    }
+}
