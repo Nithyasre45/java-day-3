@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the temperature (in °C): ");
+        int temp = sc.nextInt();
+
+        if (temp < 10) {
+            System.out.println("Weather condition: Cold");
+        } else if (temp < 20) {
+            System.out.println("Weather condition: Pleasant");
+        } else if (temp < 30) {
+            System.out.println("Weather condition: Hot");
+        } else {
+            System.out.println("Weather condition: Heatwave");
+        }
+
+        sc.close();
+    }
+}
