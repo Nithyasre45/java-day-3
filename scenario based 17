@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter day of the week: ");
+        String day = sc.next();
+        day = day.toLowerCase();
+        int ticketPrice;
+        switch(day) {
+            case "monday":
+            case "tuesday":
+            case "wednesday":
+            case "thursday":
+            case "friday":
+                ticketPrice = 100;
+                System.out.println("Weekday Ticket Price: ₹" + ticketPrice);
+                break;
+            case "saturday":
+            case "sunday":
+                ticketPrice = 150;
+                System.out.println("Weekend Ticket Price: ₹" + ticketPrice);
+                break;
+            default:
+                System.out.println("Invalid day entered!");
+        }
+
+        sc.close();
+    }
+}
