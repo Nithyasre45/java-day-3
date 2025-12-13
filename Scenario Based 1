@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter total bill amount: ₹");
+        double billAmount = sc.nextDouble();
+        double discount = 0.0;
+        if (billAmount <= 1000) {
+            discount = billAmount * 0.05; 
+        } else if (billAmount <= 5000) {
+            discount = billAmount * 0.10; 
+        } else {
+            discount = billAmount * 0.15;
+        }
+        double finalAmount = billAmount - discount;
+        System.out.println("Discount: ₹" + discount);
+        System.out.println("Amount to pay after discount: ₹" + finalAmount);
+
+        sc.close();
+    }
+}
