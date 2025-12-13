@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter total data (MB): ");
+        double totalData = sc.nextDouble();
+        System.out.print("Enter data used (MB): ");
+        double usedData = sc.nextDouble();
+        if (totalData <= 0 || usedData < 0) {
+            System.out.println("Invalid data values entered!");
+        } else {
+            double usagePercent = (usedData / totalData) * 100;
+            if (usagePercent >= 100) {
+                System.out.println("Data Over");
+            } else if (usagePercent >= 20) {
+                System.out.println("Half Consumed");
+            } else {
+                System.out.println("Low Data");
+            }
+        }
+
+        sc.close();
+    }
+}
